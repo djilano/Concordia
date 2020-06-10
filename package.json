@@ -9,7 +9,7 @@
     "xo": "^0.18.2"
   },
   "name": "Concordia",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "main": "index.js",
   "author": "ebith",
   "license": "MIT",
@@ -17,8 +17,12 @@
   "xo": {
     "space": true,
     "prettier": true,
-    "env": ["browser"],
-    "globals": ["Concordia"]
+    "env": [
+      "browser"
+    ],
+    "globals": [
+      "Concordia"
+    ]
   },
   "scripts": {
     "start": "node index.js",
