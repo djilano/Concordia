@@ -128,7 +128,7 @@ class Favorites {
     }
 
     // add favorites
-    if (Object.keys(this.favoritesHtml).length < 1) {
+    if (this.favorites.length && Object.keys(this.favoritesHtml).length < 1) {
       this.updateInfo()
     }
 
