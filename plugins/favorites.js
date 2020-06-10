@@ -62,10 +62,7 @@ class Favorites {
         'click',
         async (e) => {
           e.preventDefault()
-          // TODO: loop until we find the convo?
-          this.$channels.parentNode.scrollTop = 0
-          await Concordia.delay()
-          const $userEl = this.getConversationElement(id)
+          const $userEl = await this.getConversationElement(id)
           if ($userEl) $userEl.click()
         },
         false
@@ -87,8 +84,20 @@ class Favorites {
     return new URL(url).pathname.split('/').pop()
   }
 
-  getConversationElement(id) {
-    return this.$channels.querySelector(`a[class^="channel-"][href$="${id}"]`)
+  async getConversationElement(id) {
+    const $scroller = this.$channels.parentNode
+    const stepSize = $scroller.clientHeight
+    const maxSteps = Math.ceil(this.$channels.clientHeight / stepSize)
+    for (let i = 0; i <= maxSteps; i++) {
+      $scroller.scrollTop = i * stepSize
+      await Concordia.delay()
+      const $el = this.$channels.querySelector(
+        `a[class^="channel-"][href$="${id}"]`
+      )
+      if ($el) return $el
+    }
+
+    throw new Error('Conversation not found!')
   }
 
   isFavorite(id) {
