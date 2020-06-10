@@ -1,3 +1,7 @@
+:root {
+  --gold: #ffdc23ba;
+}
+
 .favorites-header {
   box-sizing: border-box;
   text-overflow: ellipsis;
@@ -15,6 +19,7 @@
 }
 
 .favorites-wrapper {
+  position: relative;
   padding: 6px 0;
   z-index: 1;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
@@ -22,10 +27,24 @@
 
 .favorites-wrapper a[class^='channel-'] {
   background-color: rgba(79, 84, 92, 0.32);
-  box-shadow: inset 0px -2px 0px #ffdc23ba;
   margin-bottom: 4px;
 }
 
 .favorites-wrapper a[class^='channel-'] div[class^='layout-'] {
   background-color: transparent !important;
+}
+
+.favorites-wrapper .icon-favorite--star {
+  fill: var(--gold);
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 10px;
+  left: inherit;
+  top: 12px;  
+}
+
+h2.favorites-header {
+  color: var(--gold);
+  padding-bottom: 6px;
 }
