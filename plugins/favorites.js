@@ -142,12 +142,12 @@ class Favorites {
   }
 }
 
-const Favs = new Favorites()
+const favs = new Favorites()
 window.history.onpushstate = async (e) => {
   if (Concordia.isUserHome()) {
     await Concordia.delay()
-    Favs.updateElements()
-    Favs.initObserver()
-    Favs.render(true)
+    favs.updateElements()
+    favs.initObserver()
+    favs.render(true)
   }
 }
