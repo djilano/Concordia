@@ -16,14 +16,14 @@ Inject JavaScript and CSS into Discord client
 4. Create a custom Concordia plugin folder <br>
 `mkdir ~/Concordia` or when using windows `%USERPROFILE%/Concordia`
 
-5. Copy over core.asar (re-run per discord version)
+5. Copy over **core.asar** (re-run per discord version)
 
 **Windows**<br>
-`npm start -- --inject --core %APPDATA%/discord/0.0.306/modules/discord_desktop_core/core.asar`
+`npm start -- --inject --core %APPDATA%/discord/0.0.306/modules/discord_desktop_core/core.asar` <br>
 `yarn start --inject --core %APPDATA%/discord/0.0.306/modules/discord_desktop_core/core.asar`
 
 **Mac**<br>
-`npm start -- --inject --core ~/Library/Application\ Support/discord/0.0.306/modules/discord_desktop_core/core.asar`
+`npm start -- --inject --core ~/Library/Application\ Support/discord/0.0.306/modules/discord_desktop_core/core.asar` <br>
 `yarn start --inject --core ~/Library/Application\ Support/discord/0.0.306/modules/discord_desktop_core/core.asar`
 
 
