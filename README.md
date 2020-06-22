@@ -23,7 +23,9 @@ Inject JavaScript and CSS into Discord client
 **Mac**<br>
 `npm start -- --inject --core ~/Library/Application\ Support/discord/0.0.306/modules/discord_desktop_core/core.asar` <br>
 `yarn start --inject --core ~/Library/Application\ Support/discord/0.0.306/modules/discord_desktop_core/core.asar`
-
+**Linux**<br>
+`npm start -- --inject --core ~/.config/discord/0.0.10/modules/discord_desktop_core/core.asar` <br>
+`yarn start --inject --core ~/.config/discord/0.0.10/modules/discord_desktop_core/core.asar`
 
 ### Options
 
