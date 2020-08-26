@@ -16,9 +16,8 @@ const writeFile = util.promisify(fs.writeFile)
       )}\`);
     }, 3000);
   });mainWindow.webContents.`
-  const preloadJs = `${fs.readFileSync(
-    'for-preload.js'
-  )};global.DiscordNative =`
+  const preloadJs = `${fs.readFileSync('for-preload.js')};
+  contextBridge.exposeInMainWorld('ConcordiaPreloader', ConcordiaPreloader);global.ConcordiaPreloader = ConcordiaPreloader;global.DiscordNative =`
 
   const corePath = args.core || 'core.asar'
   const targetPath = 'tmp/app/mainScreen.js'

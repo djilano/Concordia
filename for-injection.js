@@ -1,5 +1,5 @@
 ;(() => {
-  getConcordiaScripts((file, code) => {
+  ConcordiaPreloader.getScripts((file, code) => {
     console.log('[Concordia] Got script:', file)
     if (/\.js$/.test(file)) {
       // Don't tell the JS gods
